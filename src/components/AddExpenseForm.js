@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { AppContext } from '../context/AppContext';
 import { v4 as uuidv4 } from 'uuid';
 
+import { Container } from "react-bootstrap";
+
 const AddExpenseForm = () => {
     const {dispatch} = useContext(AppContext);
     const [name, setName] = useState('');
@@ -48,9 +50,15 @@ const AddExpenseForm = () => {
                     />
                 </div>
             </div>
-            <div className='form-control row'>
+            {/* <div className='form-control row'>
                 <button type='submit' className='btn btn-primary'>Submit</button>
-            </div>
+            </div> */}
+
+            <Container className="mt-3 text-center">
+                <button type='submit' className='btn btn-primary'>Add Expense</button>
+            </Container>
+
+            
         </form>
     )
 }

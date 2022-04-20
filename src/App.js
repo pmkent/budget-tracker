@@ -6,9 +6,20 @@ import ExpenseList from './components/ExpenseList';
 import Expenses from './components/Expenses';
 import { AppProvider } from './context/AppContext';
 
+import { Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+
 const App = () => {
   return (
     <AppProvider>
+
+      <Navbar bg='dark' variant='dark'>
+        <Container>
+          <Navbar.Brand>Budget Planner</Navbar.Brand>
+        </Container>
+      </Navbar>
+
+
       <div className='container'>
       <h1 className='mt-3'>My Budget Planner</h1>
       <div className='row mt-3'>
@@ -25,6 +36,10 @@ const App = () => {
         <div className='col-sm'><AddExpenseForm /></div>
       </div>
     </div>
+
+    <footer>
+      <div className='text-center'>All Rights Reserved</div>
+    </footer>
     </AppProvider>
   );
 }
